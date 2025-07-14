@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obris 7B – TerraBox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<script defer src="filter.js"></script>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1>0rbis 7B</h1>
+      <p class="subtitle">(TerraBox)</p>
+      <nav>
+        <a href="#about">À propos</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#tools">Outils</a>
+        <a>------------</a>
+        <a href="#">Signet</a>
+        <a href="#">Mistral</a>
+        <a href="#">ONNX Trad.</a>
+        <a>------------</a>
+        <a href="https://github.com/obris7b/terrabox" target="_blank">GitHub</a>
+        <p class="subtitle" style="position: absolute; bottom: 0px;">Neon</p>
+      </nav>
+    </aside>
+    <main>
+      <div class="search-wrapper">
+        <div class="search-container">
+          <input class="search-bar" type="text" placeholder="Search..." />
+          <img class="search-icon" src="src/icon/search.svg" alt="search" />
+
+          <div class="filter-container">
+            <img class="filter-icon" src="src/icon/filter.svg" alt="filtrer" onclick="toggleFilterMenu()" />
+            <div class="filter-menu" id="filterMenu">
+              <label><input type="checkbox"> Images</label>
+              <label><input type="checkbox"> Textes</label>
+              <label><input type="checkbox"> Cartes</label>
+              <label><input type="checkbox"> Tous</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="about">
+        <h2>À propos</h2>
+        <p>Obris 7B est une boîte à outils de visualisation et d’analyse de fichiers IA compressés. Elle est pensée pour
+          les explorateurs de données modernes.</p>
+      </section>
+
+      <section id="features">
+        <h2>Fonctionnalités</h2>
+        <ul>
+          <li>Analyse de fichiers IA compressés (.obz, .zbin, etc.)</li>
+          <li>Visualisation cartographique & image</li>
+          <li>Explorateur de structure neuronale</li>
+          <li>Conversion, upload, comparaison</li>
+        </ul>
+      </section>
+
+      <section id="tools">
+        <h2>Outils</h2>
+        <div class="tool-card">
+          <h3>Uploader un fichier</h3>
+          <input type="file" />
+        </div>
+
+        <div class="tool-card">
+          <h3>Explorer les données</h3>
+          <button disabled>À venir</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 Obris 7B • Projet open-source</p>
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>
