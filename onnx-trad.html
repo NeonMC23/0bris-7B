@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obris 7B – ONNX Trad.</title>
+  <link rel="stylesheet" href="src/css/style.css" />
+</head>
+
+<script defer src="src/javascript/trad.js"></script>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <a href="index.html">
+        <h1 href="index.html" style="color: #88ff00;">0rbis 7B</h1>
+        <p class="subtitle" href="index.html">(TerraBox)</p>
+      </a>
+      <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#tools">Tools</a>
+        <a>------------</a>
+        <a href="signet.html">Signet</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="onnx-trad.html" style="color: #88ff00;">ONNX Trad.</a>
+        <a>------------</a>
+        <a href="https://github.com/neonmc23/0rbis-7B" target="_blank">GitHub</a>
+        <p class="subtitle" style="position: absolute; bottom: 0px;">Neon</p>
+      </nav>
+    </aside>
+    <main>
+      <h2>ONNX Translation</h2>
+
+      <section id="translator">
+        <div class="translator-box">
+          <label for="source-lang">From:</label>
+          <select id="source-lang">
+            <option value="eng_Latn">English</option>
+            <option value="fra_Latn" selected>French</option>
+            <option value="spa_Latn">Spanish</option>
+            <option value="deu_Latn">German</option>
+            <option value="ita_Latn">Italian</option>
+            <option value="jpn_Jpan">Japanese</option>
+            <option value="arb_Arab">Arabic</option>
+          </select>
+
+          <label for="target-lang">To:</label>
+          <select id="target-lang">
+            <option value="eng_Latn" selected>English</option>
+            <option value="fra_Latn">French</option>
+            <option value="spa_Latn">Spanish</option>
+            <option value="deu_Latn">German</option>
+            <option value="ita_Latn">Italian</option>
+            <option value="jpn_Jpan">Japanese</option>
+            <option value="arb_Arab">Arabic</option>
+          </select>
+
+          <textarea id="input-text" placeholder="Enter your text here..."></textarea>
+          <button id="translate-btn">Translate</button>
+
+          <div id="translation-output" class="output-box"></div>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 Orbis 7B • Open-source (Neon)</p>
+      </footer>
+    </main>
+
+  </div>
+</body>
+
+</html>

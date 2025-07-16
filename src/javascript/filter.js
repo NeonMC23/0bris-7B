@@ -3,7 +3,6 @@ function toggleFilterMenu() {
   menu.classList.toggle('show');
 }
 
-// Fermer au clic hors menu
 document.addEventListener('click', function(e) {
   const menu = document.getElementById('filterMenu');
   const icon = document.querySelector('.filter-icon');

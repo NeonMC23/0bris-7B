@@ -1,82 +1,118 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Obris 7B – TerraBox</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="src/css/style.css" />
 </head>
 
-<script defer src="filter.js"></script>
+<script defer src="src/javascript/filter.js"></script>
 
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h1>0rbis 7B</h1>
-      <p class="subtitle">(TerraBox)</p>
+      <a href="index.html">
+        <h1 href="index.html">0rbis 7B</h1>
+        <p class="subtitle" href="index.html" style="color: #00ffcc;">(TerraBox)</p>
+      </a>
       <nav>
-        <a href="#about">À propos</a>
-        <a href="#features">Fonctionnalités</a>
-        <a href="#tools">Outils</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#tools">Tools</a>
         <a>------------</a>
-        <a href="#">Signet</a>
-        <a href="#">Mistral</a>
-        <a href="#">ONNX Trad.</a>
+        <a href="signet.html">Signet</a>
+        <a href="mistral.html">Mistral</a>
+        <a href="onnx-trad.html">ONNX Trad.</a>
         <a>------------</a>
-        <a href="https://github.com/obris7b/terrabox" target="_blank">GitHub</a>
+        <a href="https://github.com/neonmc23/0rbis-7B" target="_blank">GitHub</a>
         <p class="subtitle" style="position: absolute; bottom: 0px;">Neon</p>
       </nav>
     </aside>
     <main>
       <div class="search-wrapper">
         <div class="search-container">
-          <input class="search-bar" type="text" placeholder="Search..." />
+          <input id="search" class="search-bar" type="text" placeholder="Search..." />
           <img class="search-icon" src="src/icon/search.svg" alt="search" />
 
           <div class="filter-container">
             <img class="filter-icon" src="src/icon/filter.svg" alt="filtrer" onclick="toggleFilterMenu()" />
             <div class="filter-menu" id="filterMenu">
-              <label><input type="checkbox"> Images</label>
-              <label><input type="checkbox"> Textes</label>
-              <label><input type="checkbox"> Cartes</label>
-              <label><input type="checkbox"> Tous</label>
+              <div class="filters">
+                <p>Language</p>
+                <label><input type="checkbox" value="fr" name="lang"> French</label>
+                <label><input type="checkbox" value="en" name="lang"> English</label>
+                <label><input type="checkbox" value="multi" name="lang"> Multilingual</label>
+
+                <p>Content Type</p>
+                <label><input type="checkbox" value="text" name="type"> Text</label>
+                <label><input type="checkbox" value="images" name="type"> Images</label>
+                <label><input type="checkbox" value="maps" name="type"> Maps</label>
+                <label><input type="checkbox" value="pdf" name="type"> PDF</label>
+
+                <p>Source</p>
+                <label><input type="checkbox" value="wikipedia" name="source"> Wikipedia</label>
+                <label><input type="checkbox" value="wikidata" name="source"> Wikidata</label>
+                <label><input type="checkbox" value="books" name="source"> Books</label>
+                <label><input type="checkbox" value="guides" name="source"> Guides</label>
+
+                <p>Others</p>
+                <label><input type="checkbox" value="hasImage" name="meta"> With Image</label>
+                <label><input type="checkbox" value="aiReady" name="meta"> IA Indexed</label>
+              </div>
+              <button>Apply</button>
             </div>
           </div>
         </div>
       </div>
 
       <section id="about">
-        <h2>À propos</h2>
-        <p>Obris 7B est une boîte à outils de visualisation et d’analyse de fichiers IA compressés. Elle est pensée pour
-          les explorateurs de données modernes.</p>
+        <h2>About</h2>
+        <p>TerraBox is a portable offline knowledge system designed for data resilience, education, survival, and
+          exploration. It gives you access to a multilingual encyclopedia, scientific data, interactive maps, and a
+          local AI — all without internet access.</p>
       </section>
 
       <section id="features">
-        <h2>Fonctionnalités</h2>
+        <h2>Features</h2>
         <ul>
-          <li>Analyse de fichiers IA compressés (.obz, .zbin, etc.)</li>
-          <li>Visualisation cartographique & image</li>
-          <li>Explorateur de structure neuronale</li>
-          <li>Conversion, upload, comparaison</li>
+          <li>Full-text search across Wikipedia (FR/EN), Wikidata, and scientific sources</li>
+          <li>Image and map viewer with offline tile support (OSM, relief, historical)</li>
+          <li>Offline translation in 200+ languages (NLLB local model)</li>
+          <li>Local AI assistant (Q&A chatbot) powered by LLaMA or Mistral models</li>
+          <li>Structured data explorer (CSV, JSON, GeoJSON)</li>
+          <li>Document reader for PDFs (guides, manuals, books)</li>
         </ul>
       </section>
 
       <section id="tools">
-        <h2>Outils</h2>
+        <h2>Tools</h2>
+
         <div class="tool-card">
-          <h3>Uploader un fichier</h3>
-          <input type="file" />
+          <a href="index.html#search">
+            <h3>Search the knowledge base</h3>
+            <button>Launch Search</button>
+          </a>
         </div>
 
         <div class="tool-card">
-          <h3>Explorer les données</h3>
-          <button disabled>À venir</button>
+          <a href="mistral.html">
+            <h3>Ask the AI</h3>
+            <button>Open AI Assistant</button>
+          </a>
+        </div>
+
+        <div class="tool-card">
+          <a href="onnx-trad.html">
+            <h3>Translate text</h3>
+            <button>Open Translator</button>
+          </a>
         </div>
       </section>
 
       <footer>
-        <p>© 2025 Obris 7B • Projet open-source</p>
+        <p>© 2025 Orbis 7B • Open-source (Neon)</p>
       </footer>
     </main>
   </div>
